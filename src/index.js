@@ -10,7 +10,7 @@ import signin from './components/auth/signin';
 import signout from './components/auth/signout';
 import signup from './components/auth/signup';
 import Feature from './components/feature';
-import Welcome from './components/auth/require_auth';
+import Welcome from './components/Welcome';
 import RequireAuth from './components/auth/require_auth';
 import reducers from './reducers';
 import {AUTH_USER} from './actions/types';

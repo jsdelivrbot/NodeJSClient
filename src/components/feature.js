@@ -5,16 +5,22 @@ import {Link} from 'react-router';
 import * as actions from '../actions'
 
 class feature extends React.Component {
-    /*componentWillMount(){
-        this.props.fetchMessages()
-    }*/
+    componentWillMount(){
+        this.props.fetchMessage()
+    }
 
     render() {
         return(
-            <div>feature</div>
+            <div>
+                feature
+                <strong>{this.props.message}</strong>
+            </div>
         )
     }
 }
 
+function mapStateToProps(state) {
+    return {message: state.auth.message}
+}
 
-export default feature;
+export default connect(mapStateToProps, actions)(feature);
